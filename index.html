@@ -18,13 +18,21 @@ https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css
     <title>Webstudio - Home Page</title>
   </head>
   <body>
+    <!-- Modal -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="close-btn" data-modal-close>X</button>
+      </div>
+    </div>
+    <!-- Modal -->
+
     <header>
       <div class="container">
         <a class="logo" href="./">Web<span class="accent">Studio</span> </a>
         <nav>
           <ul class="nav-links">
             <li class="text-m-500">
-              <a class="link" href="./">Studio</a>
+              <a class="link active" href="./">Studio</a>
             </li>
             <li class="text-m-500">
               <a class="link" href="./portfolio">Portfolio</a>
@@ -50,7 +58,7 @@ https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css
       <section class="hero section">
         <div class="container">
           <h1 class="header-xl">Effective Solutions for Your Business</h1>
-          <button class="hero-button text-btn" type="button">
+          <button class="hero-button text-btn" type="button" data-modal-open>
             Order Service
           </button>
         </div>
@@ -392,5 +400,6 @@ https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css
         </div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
