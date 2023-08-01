@@ -121,6 +121,9 @@ p {
   background: var(--dairy, #fcfcfc);
 }
 .modal > .close-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 24px;
   height: 24px;
   border: 0;
@@ -136,6 +139,12 @@ p {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+.icon-close-icon {
+  fill: black;
+  width: 8px;
+  height: 8px;
+  margin: 0;
 }
 
 .visually-hidden {
@@ -513,4 +522,29 @@ footer .text-m {
 }
 .project-text > .header-s {
   margin-bottom: 8px;
+}
+.project {
+  position: relative;
+}
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--ocean);
+  opacity: 0;
+  transform: translateY(100%);
+  transition: 250ms;
+  width: 360px;
+  height: 300px;
+}
+
+.projects-container .project .project-link:hover .project-overlay,
+.projects-container .project .project-link:focus .project-overlay {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+.project-overlay .overlay-text {
+  color: var(--cloud, #f4f4fd);
+  padding: 32px 32px 0 32px;
 }
