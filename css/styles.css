@@ -526,6 +526,10 @@ footer .text-m {
 .project {
   position: relative;
 }
+.overlay-container {
+  overflow: hidden;
+}
+
 .project-overlay {
   position: absolute;
   top: 0;
