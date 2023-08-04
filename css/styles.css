@@ -520,22 +520,22 @@ footer .text-m {
 .project {
   position: relative;
   overflow: hidden;
-  display: block;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.project:hover {
+.project:hover,
+.project:focus {
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
 .project-link {
-  width: 360px;
-  text-decoration: none;
   display: block;
+  text-decoration: none;
   transition: box-shadow cubic-bezier(0.4, 0, 0.2, 1);
 }
-.project-link:focus .project {
+.project-link:focus,
+.project-link:hover {
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
@@ -547,7 +547,6 @@ footer .text-m {
   border-top: 0;
   background: var(--white, #fff);
   position: relative;
-  z-index: 3;
 }
 
 .project-text > .header-s {
@@ -560,9 +559,9 @@ footer .text-m {
   left: 0;
   background-color: var(--ocean);
   opacity: 1;
-  transform: translateY(100%);
   width: 360px;
   height: 100%;
+  transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
